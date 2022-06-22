@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Updated List</title>
+</head>
+<body>
+<form method="post" action="{% url 'deletedbooks' %}">
+    {% csrf_token %}
+    <input type="text" placeholder="Enter Book ID" name="bookid">
+    <input type="submit" value="Submit">
+    <a href="{% url 'home'%}">Home</a>
+</form>
+
+</body>
+</html>

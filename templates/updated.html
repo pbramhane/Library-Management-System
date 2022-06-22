@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        document.getElementById('result').innerHTML=localStorage.getItem('textvalue')
+    </script>
+</head>
+<body>
+
+ID = <span id="result"></span>
+<form method="post" action="{% url 'updatedbooks' %}">
+    {% csrf_token %}
+<table>
+
+    <tr>
+    <tr>
+
+        <td>Update Book Name: </td>
+        <td><input type="text" placeholder="Enter Book", name="bookname"></td>
+    </tr>
+    <tr>
+        <td>Update Author: </td>
+        <td><input type="text" placeholder="Enter author", name="author"></td>
+    </tr>
+    <tr>
+        <td>Update Quantity: </td>
+        <td><input type="text" placeholder="Enter Quantity", name="quantity"></td>
+    </tr>
+
+
+
+</table>
+    <input type="submit" value="Update Book">
+    </form>
+<a href="{% url 'home'%}">Home</a>
+
+</body>
+</html>

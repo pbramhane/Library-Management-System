@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Book</title>
+</head>
+<body>
+<form method="post">
+   {% csrf_token %}
+<table>
+    <tr>
+        <td>Book Name: </td>
+        <td><input type="text" placeholder="Enter Book", name="bookname"></td>
+    </tr>
+    <tr>
+        <td>Author: </td>
+        <td><input type="text" placeholder="Enter author", name="author"></td>
+    </tr>
+    <tr>
+        <td>Quantity: </td>
+        <td><input type="text" placeholder="Enter Quantity", name="quantity"></td>
+    </tr>
+
+
+</table>
+    <input type="submit" value="Add Book">
+    </form>
+<a href="{% url 'home'%}">Home</a>
+</body>
+</html>

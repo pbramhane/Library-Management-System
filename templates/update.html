@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update</title>
+
+    <script>
+        function passvalues(){
+        var bookid= document.getElementById('book_id').value;
+        localstorage.setItem('textvalue', bookid);
+        return false;
+
+        }
+    </script>
+
+</head>
+<body>
+
+
+<form method="POST" action="{% url 'bookupdate' %}">
+    {% csrf_token %}
+
+
+    <input type="text" placeholder="Enter Book ID" id="txt" >
+        <input type="submit" value="Click" id="btn1" onclick="passvalues();">
+
+    </form>
+
+<a href="{% url 'home'%}">Home</a>
+
+
+
+
+
+</body>
+
+
+</html>

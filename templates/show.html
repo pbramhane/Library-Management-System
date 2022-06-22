@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Show Books</title>
+</head>
+<header><h3>Showing All Books</h3></header>
+<body>
+<table border="1">
+    <tr>
+        <th>Book ID</th>
+        <th>Book Name</th>
+        <th>Author Name</th>
+        <th>Quantity</th>
+        {% for data in Book %}
+        <tr>
+        <td>{{data.id}}</td>
+        <td>{{data.bookname}}</td>
+        <td>{{data.author}}</td>
+        <td>{{data.quantity}}</td>
+        {% endfor %}
+    </tr>
+    </tr>
+</table>
+<a href="{% url 'home'%}">Home</a>
+</body>
+</html>
